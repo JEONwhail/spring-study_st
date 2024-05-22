@@ -1,0 +1,26 @@
+<!-- 반복문 사용하기 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>반복문</h1>
+    <ul>
+        <li th:each="dto : ${list}"> <!-- 앞에 변수를 선언하여 리스트의 모든 요소 꺼내기 -->
+            [[${dto}]] <!-- 리스트의 크기만큼 컨텐츠 생성 -->
+        </li>
+    </ul>
+
+    <h1>반복문의 반복상태</h1>
+    <ul>
+        <li th:each="dto, status : ${list}">  <!-- 두번째 파라미터로 반복상태를 꺼냄 -->
+            [[${status}]] <!-- index, count(1부터시작), size 크기, current 현재객체 -->
+        </li>
+    </ul>
+
+</body>
+</html>
